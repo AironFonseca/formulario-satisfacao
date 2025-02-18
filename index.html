@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisa de Satisfação</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Pesquisa de Satisfação</h2>
+        <form id="pesquisaFormulario" novalidate>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="Ex: Pedro..." required minlength="5">
+            <span class="erro" id="erroNome"></span>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Ex: pedrohr@gmail.com..." required>
+            <span class="erro" id="erroEmail"></span>
+
+            <fieldset>
+                <legend>Como você avaliaria nosso serviço?</legend>
+                <label><input type="radio" name="avaliacao" value="excelente"> Excelente</label>
+                <label><input type="radio" name="avaliacao" value="bom"> Bom</label>
+                <label><input type="radio" name="avaliacao" value="regular"> Regular</label>
+                <label><input type="radio" name="avaliacao" value="ruim"> Ruim</label>
+                <span class="erro" id="erroAvaliacao"></span>
+            </fieldset>
+
+            <label for="sugestoes">Sugestões:</label>
+            <textarea name="sugestoes" id="sugestoes" placeholder="Deixe suas sugestões aqui..."></textarea>
+
+            <label for="interesse"><input type="checkbox" id="interesse" name="interesse"> Sim, quero receber novidades!</label>
+
+            <label for="categoria">Qual categoria melhor descreve você?</label>
+            <select name="categoria" id="categoria" required>
+                <option value="">Selecione uma categoria</option>
+                <option value="cliente">Cliente</option>
+                <option value="fornecedor">Fornecedor</option>
+                <option value="funcionario">Funcionário</option>
+            </select>
+            <span class="erro" id="erroCategoria"></span>
+
+            <button type="submit">Enviar</button>
+        </form>
+        <p id="resultado"></p>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
